@@ -1,70 +1,34 @@
-:root{
-  --brand-dark:#111;
-  --brand-accent:#ffcc00;
-  --bg:#f4f4f4;
-  --text:#222;
+body {
+  background: #f4f4f4;
+  color: #222;
+  overflow-x: hidden;
 }
 
-html { scroll-behavior: smooth; }
-
-body{
-  background: var(--bg);
-  color: var(--text);
+/* anim,*/
+@keyframes aparecer-subiendo {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.navbar{
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.navbar-brand{
-  letter-spacing: 0.3px;
-}
-
-.navbar .nav-link{
-  border-radius: 8px;
-  padding: 8px 12px;
+.card {
+  animation: aparecer-subiendo 0.6s ease both;
 }
 
-.navbar .nav-link:hover{
-  background: rgba(255, 204, 0, 0.15);
-}
-
-.navbar .nav-link.active{
-  background: rgba(255, 204, 0, 0.25);
-  border: 1px solid rgba(255, 204, 0, 0.35);
-}
-
-.card{
-  border-radius: 14px;
-  border-color: rgba(0,0,0,0.08);
-}
-
-.card-title{
-  margin-bottom: 0.5rem;
-}
-
-.btn-warning{
-  background: var(--brand-accent);
-  border-color: var(--brand-accent);
-  color: #111;
-}
-
-.btn-warning:hover{
-  filter: brightness(0.95);
-}
-
-img{
+img, iframe {
   max-width: 100%;
   height: auto;
 }
-.site-footer{
-  background: var(--brand-dark);
-  color: #fff;
-  border-top: 4px solid var(--brand-accent);
-}
 
-/* Responsive*/
-@media (min-width: 992px){
-  .navbar .nav-link{
-    padding: 8px 14px;
+/* mobile*/
+@media (max-width: 576px) {
+  .navbar .nav-link {
+    padding: 10px 12px;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
