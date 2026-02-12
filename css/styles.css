@@ -41,6 +41,15 @@ img, iframe {
   transform: scale(1.25);
 }
 
+.navbar .nav-link {
+  transition: all 0.2 ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
 /* mobile*/
 @media (max-width: 576px) {
   .navbar .nav-link {
