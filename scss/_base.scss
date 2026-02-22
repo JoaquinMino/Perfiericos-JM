@@ -2,13 +2,91 @@
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: $color-fondo;
-  color: $color-texto;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
   @include sin-scroll-horizontal;
 }
 
-/* Animación (opt-in) */
+.site-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #0b0b0b;
+  color: #fff;
+  border-bottom: 3px solid #ffc107;
+}
+
+.hero {
+  padding: 24px 0;
+
+  &__title {
+    margin: 0 0 6px;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 1.05rem;
+  }
+}
+
+.main {
+  padding: 22px 0 28px;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+.figure {
+  margin: 12px 0 0;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+
+  &__caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+}
+
+.list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
 @keyframes aparecer-subiendo {
   from { opacity: 0; transform: translateY(12px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -18,31 +96,52 @@ body {
   animation: aparecer-subiendo 0.6s ease both;
 }
 
-/* Hover de iconos del footer (detalle visual) */
-.site-footer img {
-  transition: transform 0.2s ease;
+.site-footer {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 18px 0 22px;
 }
 
-.site-footer img:hover {
-  transform: scale(1.15);
+.footer__copy {
+  margin: 0 0 10px;
+  opacity: 0.9;
 }
 
-/* Hover del navbar (detalle visual) */
+.footer__title {
+  margin: 0 0 10px;
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__link {
+    display: inline-flex;
+    text-decoration: none;
+  }
+
+  &__img {
+    height: auto;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
 .navbar .nav-link {
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    color: #ffc107;
+    transform: translateY(-2px);
+  }
 }
 
-.navbar .nav-link:hover {
-  color: $color-acento;
-  transform: translateY(-2px);
-}
-
-/* Opcional: scroll suave para anclas */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Para que #redes no quede pegado al borde al navegar */
 #redes {
   scroll-margin-top: 90px;
 }

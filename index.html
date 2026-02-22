@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
-      <div class="container">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="site-container">
         <a class="navbar-brand fw-bold" href="index.html">Periféricos</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
@@ -22,7 +22,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto gap-2 py-2 py-lg-0">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/teclado/teclado.html">Teclado</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/mouse/mouse.html">Mouse</a></li>
@@ -32,78 +32,67 @@
       </div>
     </nav>
 
-    <div class="container py-4">
-      <h1 class="display-6 mb-2">Periféricos de PC</h1>
-      <p class="lead mb-0">Guía básica de teclado, mouse y más.</p>
+    <div class="site-container hero">
+      <h1 class="hero__title">Periféricos de PC</h1>
+      <p class="hero__subtitle">Guía básica de teclado, mouse y más.</p>
     </div>
   </header>
 
-  <main class="container pb-4">
-    <section class="mb-4">
-      <div class="card shadow-sm anim-card">
-        <div class="card-body">
-          <h2 class="h4 card-title">¿Qué es un periférico?</h2>
-          <p class="card-text">
-            Un periférico es un dispositivo que se conecta a la computadora para permitir la entrada, salida o comunicación
-            de información. Por ejemplo: teclado (entrada), monitor (salida) y auriculares (salida).
-          </p>
+  <main class="site-container main">
+    <section class="card anim-card section">
+      <div class="card-body">
+        <h2 class="card-title h4">¿Qué es un periférico?</h2>
+        <p class="card-text">
+          Un periférico es un dispositivo que se conecta a la computadora para permitir la entrada, salida o comunicación
+          de información. Por ejemplo: teclado (entrada), monitor (salida) y auriculares (salida).
+        </p>
 
-          <figure class="mb-0">
-            <img class="img-fluid rounded border" src="img/perifericos.jpg" alt="Periféricos comunes: teclado y mouse">
-            <figcaption class="text-muted small mt-2">Ejemplos comunes: teclado y mouse.</figcaption>
-          </figure>
-        </div>
+        <figure class="figure">
+          <img class="figure__img" src="img/perifericos.jpg" alt="Periféricos comunes: teclado y mouse">
+          <figcaption class="figure__caption">Ejemplos comunes: teclado y mouse.</figcaption>
+        </figure>
       </div>
     </section>
+    <section class="section grid-2">
+      <article class="card anim-card">
+        <div class="card-body">
+          <h2 class="card-title h5">Tipos principales</h2>
+          <ul class="list">
+            <li><strong>Entrada:</strong> teclado, mouse, micrófono.</li>
+            <li><strong>Salida:</strong> monitor, parlantes, impresora.</li>
+            <li><strong>Entrada/Salida:</strong> auriculares con micrófono, pantallas táctiles.</li>
+          </ul>
+        </div>
+      </article>
 
-    <section class="mb-4">
-      <div class="row g-3">
-        <article class="col-12 col-md-6">
-          <div class="card h-100 shadow-sm anim-card">
-            <div class="card-body">
-              <h2 class="h5 card-title">Tipos principales</h2>
-              <ul class="mb-0">
-                <li><strong>Entrada:</strong> teclado, mouse, micrófono.</li>
-                <li><strong>Salida:</strong> monitor, parlantes, impresora.</li>
-                <li><strong>Entrada/Salida:</strong> auriculares con micrófono, pantallas táctiles.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="col-12 col-md-6">
-          <div class="card h-100 shadow-sm anim-card">
-            <div class="card-body">
-              <h2 class="h5 card-title">Consejos rápidos</h2>
-              <p class="card-text mb-0">
-                Elegí periféricos según tu uso: estudio, oficina, gaming o diseño. Revisá ergonomía, tipo de conexión (USB/Bluetooth)
-                y compatibilidad.
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
+      <article class="card anim-card">
+        <div class="card-body">
+          <h2 class="card-title h5">Consejos rápidos</h2>
+          <p class="card-text">
+            Elegí periféricos según tu uso: estudio, oficina, gaming o diseño. Revisá ergonomía, tipo de conexión (USB/Bluetooth)
+            y compatibilidad.
+          </p>
+        </div>
+      </article>
     </section>
   </main>
 
-  <footer class="site-footer py-3 mt-auto bg-dark text-white">
-    <div class="container">
-      <p class="mb-1">© CoderHouse - Joaquin Miño.</p>
+  <footer class="site-footer">
+    <div class="site-container">
+      <p class="footer__copy">© CoderHouse - Joaquin Miño, segunda entrega.</p>
 
-      <section id="redes" class="pt-2">
-        <h2 class="h6 mb-2 text-warning">Redes</h2>
+      <section id="redes" class="footer__redes">
+        <h2 class="footer__title">Redes</h2>
 
-        <div class="d-flex justify-content-center justify-content-md-start align-items-center gap-3">
-          <a class="text-decoration-none" href="https://instagram.com" target="_blank" rel="noopener">
-            <img class="img-fluid" src="img/ig.png" alt="Instagram" width="50">
+        <div class="social">
+          <a class="social__link" href="https://instagram.com" target="_blank" rel="noopener">
+            <img class="social__img" src="img/ig.png" alt="Instagram" width="50">
           </a>
-
-          <a class="text-decoration-none" href="https://x.com" target="_blank" rel="noopener">
-            <img class="img-fluid" src="img/x.png" alt="X" width="75">
+          <a class="social__link" href="https://x.com" target="_blank" rel="noopener">
+            <img class="social__img" src="img/x.png" alt="X" width="75">
           </a>
-
-          <a class="text-decoration-none" href="https://youtube.com" target="_blank" rel="noopener">
-            <img class="img-fluid" src="img/yt.png" alt="YouTube" width="66">
+          <a class="social__link" href="https://youtube.com" target="_blank" rel="noopener">
+            <img class="social__img" src="img/yt.png" alt="YouTube" width="66">
           </a>
         </div>
       </section>
